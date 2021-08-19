@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <!--
+    定义一个bean
+    id：bean的唯一标识，可以通过这个标识从容器中获取这个bean对象
+    clss：这个bean的类型，完整类名称
+    -->
+    <!-- 通过id定义bean名称：user1 -->
+<!--    <bean id="user1" class="com.wxj.lesson001.demo2.UserModel"/>-->
+
+    <!-- 通过name定义bean名称：user2 -->
+<!--    <bean name="user2" class="com.wxj.lesson001.demo2.UserModel"/>-->
+
+    <!-- id为名称，name为别名；bean名称：user3，1个别名：[user3_1] -->
+<!--    <bean id="user3" name="user3_1" class="com.wxj.lesson001.demo2.UserModel"/>-->
+
+    <!-- bean名称：user4，多个别名：[user4_1,user4_2,user4_3,user4_4] -->
+<!--    <bean id="user4" name="user4_1,user4_2;user4_3 user4_4" class="com.wxj.lesson001.demo2.UserModel"/>-->
+
+    <!-- bean名称：user5，别名：[user5_1,user5_2,user5_3,user5_4] -->
+<!--    <bean name="user5,user5_1,user5_2;user5_3 user5_4" class="com.wxj.lesson001.demo2.UserModel"/>-->
+
+<!--    <bean class="com.wxj.lesson001.demo2.UserModel" />-->
+<!--    <bean class="com.wxj.lesson001.demo2.UserModel" />-->
+
+<!--    <bean class="java.lang.String" />-->
+<!--    <bean class="java.lang.String" />-->
+
+
+    <!-- 通过UserModel的默认构造方法创建UserModel对象 -->
+<!--    <bean id="createBeanByConstructor1" class="com.wxj.lesson001.demo3.UserModel"/>-->
+
+    <!-- 通过UserModel有参构造方法创建UserModel对象 -->
+<!--    <bean id="createBeanByConstructor2" class="com.wxj.lesson001.demo3.UserModel">-->
+<!--        <constructor-arg index="0" value="我是通过UserModel的有参方法构造的对象!"/>-->
+<!--        <constructor-arg index="1" value="30"/>-->
+<!--    </bean>-->
+
+
+    <!-- 通过工厂静态无参方法创建bean对象 -->
+<!--    <bean id="createBeanByStaticFactoryMethod1" class="com.wxj.lesson001.demo3.UserStaticFactory"-->
+<!--          factory-method="buildUser1"/>-->
+
+    <!-- 通过工厂静态有参方法创建bean对象 -->
+<!--    <bean id="createBeanByStaticFactoryMethod2" class="com.wxj.lesson001.demo3.UserStaticFactory"-->
+<!--          factory-method="buildUser2">-->
+<!--        <constructor-arg index="0" value="通过工厂静态有参方法创建UerModel实例对象"/>-->
+<!--        <constructor-arg index="1" value="30"/>-->
+<!--    </bean>-->
+
+
+    <!-- 定义一个工厂实例 -->
+<!--    <bean id="userFactory" class="com.wxj.lesson001.demo3.UserFactory"/>-->
+    <!-- 通过userFactory实例的无参user方法创建UserModel对象 -->
+<!--    <bean id="createBeanByBeanMethod1" factory-bean="userFactory" factory-method="buildUser1"/>-->
+
+    <!-- 通过userFactory实例的有参user方法创建UserModel对象 -->
+<!--    <bean id="createBeanByBeanMethod2" factory-bean="userFactory" factory-method="buildUser2">-->
+<!--        <constructor-arg index="0" value="通过bean实例有参方法创建UserModel实例对象"/>-->
+<!--        <constructor-arg index="1" value="30"/>-->
+<!--    </bean>-->
+
+
+    <!-- 通过FactoryBean 创建UserModel对象 -->
+<!--    <bean id="createByFactoryBean" class="com.wxj.lesson001.demo3.UserFactoryBean"/>-->
+
+
+    <!-- 单例bean，scope设置为singleton -->
+<!--    <bean id="singletonBean" class="com.wxj.lesson001.demo4.BeanScopeModel" scope="singleton">-->
+<!--        <constructor-arg index="0" value="singleton"/>-->
+<!--    </bean>-->
+
+    <!-- 多例bean，scope设置为prototype-->
+    <bean name="prototypeBean" class="com.wxj.lesson001.demo4.BeanScopeModel" scope="prototype">
+        <constructor-arg index="0" value="prototype"/>
+    </bean>
+</beans>
