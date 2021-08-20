@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="serviceAA" class="com.wxj.lesson001.demo12.ServiceAA"/>
+
+    <bean id="serviceBB" class="com.wxj.lesson001.demo12.ServiceBB">
+        <property name="name" value="路人甲Java"/>
+        <property name="serviceAA" ref="serviceAA"/>
+    </bean>
+
+    <bean id="serviceCC" class="com.wxj.lesson001.demo12.ServiceCC">
+        <property name="name" value="路人甲Java"/>
+        <property name="serviceAA" ref="serviceAA"/>
+    </bean>
+
+</beans>
