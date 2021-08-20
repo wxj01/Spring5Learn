@@ -15,10 +15,10 @@
     </bean>
 
     <!-- autowire：byName 配置按照name进行自动注入 -->
-    <bean id="DiAutowireByType1" class="com.wxj.lesson001.demo6.DiAutowireByType" autowire="byType"/>
+    <bean id="diAutowireByType1" class="com.wxj.lesson001.demo6.DiAutowireByType" autowire="byType"/>
 
     <!-- 当配置了自动注入，还可以使用手动的方式自动注入进行覆盖，手动的优先级更高一些 -->
-    <bean id="DiAutowireByType2" class="com.wxj.lesson001.demo6.DiAutowireByType" autowire="byType">
+    <bean id="diAutowireByType2" class="com.wxj.lesson001.demo6.DiAutowireByType" autowire="byType">
         <property name="service2" ref="service2-1"/>
     </bean>
 

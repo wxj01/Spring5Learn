@@ -48,7 +48,48 @@ public class DiAutowireTest {
     public void diAutowireByType() {
         String beanXml = "diAutowireByType.xml";
         ClassPathXmlApplicationContext context = IocUtils.context(beanXml);
-        System.out.println(context.getBean("diAutowireByType1"));
-        System.out.println(context.getBean("diAutowireByType2"));
+        System.out.println(context.getBean("DiAutowireByType1"));
+        System.out.println(context.getBean("DiAutowireByType2"));
+    }
+
+
+    /**
+     * 按照类型注入集合
+     */
+    @Test
+    public void diAutowireByTypeExtend() {
+        String beanXml = "diAutowireByTypeExtend.xml";
+        ClassPathXmlApplicationContext context = IocUtils.context(beanXml);
+        //从容器中获取DiAutowireByTypeExtend
+        DiAutowireByTypeExtend diAutowireByTypeExtend = context.getBean(DiAutowireByTypeExtend.class);
+        //输出diAutowireByTypeExtend中的属性看一下
+        System.out.println("serviceList：" + diAutowireByTypeExtend.getServiceList());
+        System.out.println("baseServieList：" + diAutowireByTypeExtend.getBaseServieList());
+        System.out.println("service1Map：" + diAutowireByTypeExtend.getService1Map());
+        System.out.println("baseServieMap：" + diAutowireByTypeExtend.getBaseServieMap());
+    }
+
+
+
+    /**
+     * 构造函数的方式进行自动注入
+     */
+    @Test
+    public void diAutowireByConstructor() {
+        String beanXml = "diAutowireByConstructor.xml";
+        ClassPathXmlApplicationContext context = IocUtils.context(beanXml);
+        System.out.println(context.getBean("diAutowireByConstructor"));
+    }
+
+
+    /**
+     * autowire=default
+     */
+    @Test
+    public void diAutowireByDefault() {
+        String beanXml = "diAutowireByDefault.xml";
+        ClassPathXmlApplicationContext context = IocUtils.context(beanXml);
+        System.out.println(context.getBean("diAutowireByDefault1"));
+        System.out.println(context.getBean("diAutowireByDefault2"));
     }
 }
