@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author wxj
  * @version 1.0
- * @description: TODO
+ * @description: TODO  @Configuration 只能扫描到添加了 注解的java 类，没有添加注解的就扫描了。
  * @date 2021/11/15 0015 10:28
  */
 @Configuration
