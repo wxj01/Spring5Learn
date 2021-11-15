@@ -34,3 +34,12 @@ prototype是多例的，每次从容器中获取同名的bean，都会重新创�
 ~~~markdown
 参数名称可能不稳定的问题，spring提供了解决方案，通过ConstructorProperties注解来定义参数的名称，将这个注解加在构造方法上面
 ~~~
+
+~~~markdown
+<bean id="bean1" class="" depend-on="bean2,bean3; bean4" />
+
+depend-on：设置当前bean依赖的bean名称，可以指定多个，多个之间可以用”,;空格“进行分割
+
+上面不管bean2,bean2,bean4在任何地方定义，都可以确保在bean1创建之前，会先将bean2,bean3,bean4创建好，表示bean1依赖于这3个bean，可能bean1需要用到bean2、bean3、bean4中生成的一些资源或者其他的功能等，但是又没有强制去在bean1类中通过属性定义强依赖的方式去依赖于bean2、bean3、bean4；当然销毁的时候也会先销毁当前bean，再去销毁被依赖的bean，即先销毁bean1，再去销毁depend-on指定的bean
+
+~~~
