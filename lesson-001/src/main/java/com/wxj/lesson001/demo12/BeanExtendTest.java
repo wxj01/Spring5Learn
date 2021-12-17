@@ -17,7 +17,7 @@ package com.wxj.lesson001.demo12;
  * @date 2021/8/20 0020 18:32
  */
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanExtendTest {

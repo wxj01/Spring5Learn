@@ -1,7 +1,8 @@
 package com.wxj.lesson001.demo4;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -14,7 +15,7 @@ public class ScopeTest {
 
     ClassPathXmlApplicationContext context;
 
-    @Before
+    @BeforeEach
     public void before(){
         System.out.println("spring容器准备启动.....");
         //1.bean配置文件位置
