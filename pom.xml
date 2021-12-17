@@ -22,6 +22,8 @@
         <!-- 该命令用于指定生成的class文件将保证和哪个版本的虚拟机进行兼容，maven中执行编译的时候会用到这个配置，默认是1.5，这个相当于javac命令后面的-target参数 -->
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>5.2.3.RELEASE</spring.version>
+        <aspectjweaver.version>1.9.7</aspectjweaver.version>
+        <junit.version>5.8.1</junit.version>
     </properties>
 
     <dependencyManagement>
@@ -46,7 +48,16 @@
                 <artifactId>spring-aop</artifactId>
                 <version>${spring.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
 
 
         </dependencies>
