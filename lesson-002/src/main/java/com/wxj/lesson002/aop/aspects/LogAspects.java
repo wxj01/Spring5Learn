@@ -49,6 +49,6 @@ public class LogAspects {
     @AfterThrowing(value = "wxjLogMathCalculator()", throwing="exception")
     public void logException(JoinPoint joinPoint, Exception exception) {
 
-        System.out.println(joinPoint.getSignature().getName() + "出现异常......异常信息：{" + exception + "}");    }
+        System.out.println(joinPoint.getSignature().getName() + "出现异常......@AfterThrowing异常信息：{" + exception + "}");    }
 
 }
