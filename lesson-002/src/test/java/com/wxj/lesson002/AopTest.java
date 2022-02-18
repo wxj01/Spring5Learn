@@ -19,8 +19,11 @@ public class AopTest {
 
 
         MathCalculator mathCalculator = applicationContext.getBean(MathCalculator.class);
+
+        MathCalculator bean = applicationContext.getBean(MathCalculator.class);
         mathCalculator.div(1,1);
 //        mathCalculator.div(1,0);
+        bean.div(1,0);
 
         applicationContext.close();
     }

@@ -11,7 +11,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @version 1.0
  * @description: TODO AOP：面向切面编程，其底层就是动态代理
  *  *      指在程序运行期间动态地将某段代码切入到指定方法指定位置进行运行的编程方式
-/**
  * AOP：【动态代理】
  * 		指在程序运行期间动态的将某段代码切入到指定方法指定位置进行运行的编程方式；
  *
@@ -96,7 +95,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * 					【BeanPostProcessor是在Bean对象创建完成初始化前后调用的】
  * 					【InstantiationAwareBeanPostProcessor是在创建Bean实例之前先尝试用后置处理器返回对象的】
  * 					1）、resolveBeforeInstantiation(beanName, mbdToUse);解析BeforeInstantiation
- * 						希望后置处理器在此能返回一个代理对象；如果能返回代理对象就使用，如果不能就继续
+ * 						希望后置处理器在此能返回一个代理对象；如果能返回代理对象就使用，如果不能就继续 2）步骤
  * 						1）、后置处理器先尝试返回对象；
  * 							bean = applyBeanPostProcessorsBeforeInstantiation（）：
  * 								拿到所有后置处理器，如果是InstantiationAwareBeanPostProcessor;
