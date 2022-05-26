@@ -26,7 +26,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * 4、给切面类的目标方法标注何时何地运行（通知注解）；
  * 5、将切面类和业务逻辑类（目标方法所在类）都加入到容器中;
  * 6、必须告诉Spring哪个类是切面类(给切面类上加一个注解：@Aspect)
- * [7]、给配置类中加 @EnableAspectJAutoProxy 【开启基于注解的aop模式】
+ * 7、给配置类中加 @EnableAspectJAutoProxy 【开启基于注解的aop模式】
  * 		在Spring中很多的 @EnableXXX;
  *
  * 三步：
@@ -150,7 +150,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * 			3）、将增强器转为List<MethodInterceptor>；
  * 				如果是MethodInterceptor，直接加入到集合中
  * 				如果不是，使用AdvisorAdapter将增强器转为MethodInterceptor；
- * 				转换完成返回MethodInterceptor数组；
+ *  * 				转换完成返回MethodInterceptor数组；
  *
  * 		3）、如果没有拦截器链，直接执行目标方法;
  * 			拦截器链（每一个通知方法又被包装为方法拦截器，利用MethodInterceptor机制）
@@ -165,7 +165,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * 	总结：
  * 		1）、 @EnableAspectJAutoProxy 开启AOP功能
  * 		2）、 @EnableAspectJAutoProxy 会给容器中注册一个组件 AnnotationAwareAspectJAutoProxyCreator
- * 		3）、AnnotationAwareAspectJAutoProxyCreator是一个后置处理器；
+ * 		3）、 AnnotationAwareAspectJAutoProxyCreator是一个后置处理器；
  * 		4）、容器的创建流程：
  * 			1）、registerBeanPostProcessors（）注册后置处理器；创建AnnotationAwareAspectJAutoProxyCreator对象
  * 			2）、finishBeanFactoryInitialization（）初始化剩下的单实例bean

@@ -2,7 +2,8 @@ package com.wxj.lesson002;
 
 import com.wxj.lesson002.bean.EmailEvent;
 import com.wxj.lesson002.config.AppConfiguration;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

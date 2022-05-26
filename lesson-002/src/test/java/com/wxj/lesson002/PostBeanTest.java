@@ -4,7 +4,8 @@ import com.wxj.lesson002.aware.SpringContextAssisor;
 import com.wxj.lesson002.bean.ConcreteRPBean;
 import com.wxj.lesson002.bean.PostBean;
 import com.wxj.lesson002.config.AppConfiguration;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

@@ -1,6 +1,6 @@
 package com.wxj.lesson001.demo13;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LookupMethodTest {

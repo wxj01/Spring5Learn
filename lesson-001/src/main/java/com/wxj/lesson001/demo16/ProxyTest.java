@@ -1,7 +1,6 @@
 package com.wxj.lesson001.demo16;
 
-import org.testng.annotations.Test;
-
+import org.junit.Test;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,8 +1,9 @@
 package com.wxj.lesson001.demo4;
 
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

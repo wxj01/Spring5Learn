@@ -1,7 +1,8 @@
 package com.wxj.lesson001.demo5;
 
 import com.wxj.utils.IocUtils;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

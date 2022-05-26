@@ -3,7 +3,8 @@ package com.wxj.lesson002;
 import com.wxj.lesson002.bean.Fruit;
 import com.wxj.lesson002.config.AppConfiguration;
 import com.wxj.lesson002.factorybean.FruitFactoryBean;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -2,7 +2,8 @@ package com.wxj.lesson002;
 
 import com.wxj.lesson002.config.ConcreteConfiguration;
 import com.wxj.lesson002.service.ConcreteService;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

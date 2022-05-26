@@ -1,7 +1,8 @@
 package com.wxj.lesson001.componentScan.test;
 
 import com.wxj.lesson001.componentScan.config.MainConfig;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -25,6 +25,7 @@
         <aspectjweaver.version>1.9.7</aspectjweaver.version>
         <junit.version>5.8.1</junit.version>
         <lombok.version>1.18.20</lombok.version>
+        <logback.version>1.2.3</logback.version>
     </properties>
 
     <dependencyManagement>
@@ -64,7 +65,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

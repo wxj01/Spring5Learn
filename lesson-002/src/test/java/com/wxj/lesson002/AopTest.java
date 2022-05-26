@@ -2,7 +2,8 @@ package com.wxj.lesson002;
 
 import com.wxj.lesson002.aop.MathCalculator;
 import com.wxj.lesson002.config.MainConfigOfAOP;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -20,10 +21,10 @@ public class AopTest {
 
         MathCalculator mathCalculator = applicationContext.getBean(MathCalculator.class);
 
-        MathCalculator bean = applicationContext.getBean(MathCalculator.class);
+//        MathCalculator bean = applicationContext.getBean(MathCalculator.class);
         mathCalculator.div(1,1);
 //        mathCalculator.div(1,0);
-        bean.div(1,0);
+//        bean.div(1,0);
 
         applicationContext.close();
     }
